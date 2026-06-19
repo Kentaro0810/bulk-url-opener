@@ -1,1 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>一括URLオープンツール</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="card">
+      <h1>一括URLオープンツール</h1>
+      <p class="description">
+        複数のURLを入力して、まとめて新しいタブで開けます。
+      </p>
 
+      <label for="urlInput" class="label">URL一覧</label>
+      <textarea
+        id="urlInput"
+        placeholder="例：
+https://github.com
+https://www.google.com
+example.com"
+      ></textarea>
+
+      <div class="button-group">
+        <button id="checkButton" type="button" class="sub-button">
+          URLを確認
+        </button>
+        <button id="openButton" type="button" class="main-button">
+          一括で開く
+        </button>
+      </div>
+
+      <div class="button-group">
+        <button id="saveButton" type="button" class="sub-button">
+          保存
+        </button>
+        <button id="clearButton" type="button" class="danger-button">
+          クリア
+        </button>
+      </div>
+
+      <p id="message" class="message"></p>
+
+      <section class="result-area">
+        <h2>確認結果</h2>
+        <ul id="urlList"></ul>
+      </section>
+
+      <p class="note">
+        ※ ブラウザの設定によっては、複数タブの一括オープンがブロックされることがあります。
+      </p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
